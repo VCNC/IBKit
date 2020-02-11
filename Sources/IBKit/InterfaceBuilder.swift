@@ -34,6 +34,28 @@ extension InterfaceBuilder where Self: UIView {
     }
 }
 
+extension InterfaceBuilder where Self: UICollectionViewCell {
+    /// Builds and attaches subviews according to the InterfaceBuilder's body.
+    public func build() {
+        let views = body.views
+        for v in views {
+            contentView.addSubview(v)
+        }
+        finishBuild(on: self)
+    }
+}
+
+extension InterfaceBuilder where Self: UITableViewCell {
+    /// Builds and attaches subviews according to the InterfaceBuilder's body.
+    public func build() {
+        let views = body.views
+        for v in views {
+            contentView.addSubview(v)
+        }
+        finishBuild(on: self)
+    }
+}
+
 extension InterfaceBuilder where Self: UIViewController {
 
     /// Returns a newly initialized view controller with the InterfaceBuilder's body.
