@@ -10,8 +10,9 @@ import UIKit
 
 extension UIStackView {
 
-    public convenience init(alignment: UIStackView.Alignment, @ViewBuilder builder: () -> Interface) {
+    public convenience init(axis: NSLayoutConstraint.Axis, @ViewBuilder builder: () -> Interface) {
         self.init(arrangedSubviews: builder().views)
+        self.axis = axis
     }
 
     @available(iOS 11.0, *)
