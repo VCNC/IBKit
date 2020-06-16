@@ -19,7 +19,7 @@ class ViewController: UIViewController, InterfaceBuilder {
             }
 
             for e in estimations ?? [] {
-                let view = RideEstimationView.loadFromIB()
+                let view = RideEstimationView()
                 view.estimation = e
                 stackView.addArrangedSubview(view)
             }
@@ -27,8 +27,7 @@ class ViewController: UIViewController, InterfaceBuilder {
     }
 
     var body: Interface {
-        view.backgroundColor = .systemBackground
-        return ViewGroup {
+        return UIView {
             UIStackView()
                 .axis(.vertical)
                 .alignment(.fill)
@@ -51,6 +50,7 @@ class ViewController: UIViewController, InterfaceBuilder {
                         maker.height.equalTo(1)
                     }
         }
+        .backgroundColor(.systemBackground)
     }
 }
 
@@ -62,7 +62,7 @@ import SwiftUI
 struct ViewController_Preview: PreviewProvider {
     static var previews: some View {
 
-        let vc = ViewController.loadFromIB()
+        let vc = ViewController()
         vc.estimations = decode(from: "ride_estimations")
         return Preview(viewController: vc)
             .environment(\.colorScheme, .light)

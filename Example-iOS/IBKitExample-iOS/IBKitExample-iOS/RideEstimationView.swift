@@ -36,16 +36,16 @@ class RideEstimationView: UIView, InterfaceBuilder {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        build()
+        try? build()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        build()
+        try? build()
     }
 
     var body: Interface {
-        ViewGroup {
+        This(self) {
             UIView()
                 .also {
                     let gradient = CAGradientLayer()
@@ -124,7 +124,7 @@ class RideEstimationView: UIView, InterfaceBuilder {
                 maker.width.equalTo(50).priority(.low)
             }
 
-            PriceView.loadFromIB()
+            PriceView()
                 .assign(to: \Self.priceView, on: self)
                 .makeConstraints { (maker, views) in
                     maker.trailing.centerY.equalToSuperview()

@@ -8,89 +8,89 @@
 
 import UIKit
 
-extension UILabel {
+extension This where View: UILabel {
     @discardableResult public func text(_ text: String?) -> Self {
-        self.text = text
+        view.text = text
         return self
     }
 
     @discardableResult public func font(_ font: UIFont) -> Self {
-        self.font = font
+        view.font = font
         return self
     }
 
     @discardableResult public func textColor(_ textColor: UIColor) -> Self {
-        self.textColor = textColor
+        view.textColor = textColor
         return self
     }
 
     @discardableResult public func shadowColor(_ shadowColor: UIColor?) -> Self {
-        self.shadowColor = shadowColor
+        view.shadowColor = shadowColor
         return self
     }
 
     @discardableResult public func shadowOffset(_ shadowOffset: CGSize) -> Self {
-        self.shadowOffset = shadowOffset
+        view.shadowOffset = shadowOffset
         return self
     }
 
     @discardableResult public func textAlignment(_ textAlignment: NSTextAlignment) -> Self {
-        self.textAlignment = textAlignment
+        view.textAlignment = textAlignment
         return self
     }
 
     @discardableResult public func lineBreakMode(_ lineBreakMode: NSLineBreakMode) -> Self {
-        self.lineBreakMode = lineBreakMode
+        view.lineBreakMode = lineBreakMode
         return self
     }
 
     @discardableResult public func attributedText(_ attributedText: NSAttributedString?) -> Self {
-        self.attributedText = attributedText
+        view.attributedText = attributedText
         return self
     }
 
     @discardableResult public func highlightedTextColor(_ highlightedTextColor: UIColor?) -> Self {
-        self.highlightedTextColor = highlightedTextColor
+        view.highlightedTextColor = highlightedTextColor
         return self
     }
 
     @discardableResult public func isHighlighted(_ isHighlighted: Bool) -> Self {
-        self.isHighlighted = isHighlighted
+        view.isHighlighted = isHighlighted
         return self
     }
 
     @discardableResult public func isEnabled(_ isEnabled: Bool) -> Self {
-        self.isEnabled = isEnabled
+        view.isEnabled = isEnabled
         return self
     }
 
     @discardableResult public func numberOfLines(_ numberOfLines: Int) -> Self {
-        self.numberOfLines = numberOfLines
+        view.numberOfLines = numberOfLines
         return self
     }
 
     @discardableResult public func adjustsFontSizeToFitWidth(_ adjustsFontSizeToFitWidth: Bool) -> Self {
-        self.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
+        view.adjustsFontSizeToFitWidth = adjustsFontSizeToFitWidth
         return self
     }
 
     @discardableResult public func baselineAdjustment(_ baselineAdjustment: UIBaselineAdjustment) -> Self {
-        self.baselineAdjustment = baselineAdjustment
+        view.baselineAdjustment = baselineAdjustment
         return self
     }
 
     @discardableResult public func minimumScaleFactor(_ minimumScaleFactor: CGFloat) -> Self {
-        self.minimumScaleFactor = minimumScaleFactor
+        view.minimumScaleFactor = minimumScaleFactor
         return self
     }
 
     @discardableResult public func allowsDefaultTighteningForTruncation(_ allowsDefaultTighteningForTruncation: Bool) -> Self {
-        self.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation
+        view.allowsDefaultTighteningForTruncation = allowsDefaultTighteningForTruncation
         return self
     }
 
     @discardableResult public func preferredMaxLayoutWidth(_ preferredMaxLayoutWidth: CGFloat) -> Self {
-        self.preferredMaxLayoutWidth = preferredMaxLayoutWidth
+        view.preferredMaxLayoutWidth = preferredMaxLayoutWidth
         return self
     }
 }

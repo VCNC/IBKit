@@ -11,6 +11,16 @@ import IBKit
 
 class PriceView: UIView, InterfaceBuilder {
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        try? build()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        try? build()
+    }
+
     private var surgeTextLabel: UILabel!
     private var priceLabel: UILabel!
     private var originalPriceLabel: UILabel!
@@ -35,7 +45,7 @@ class PriceView: UIView, InterfaceBuilder {
     }
 
     var body: Interface {
-        ViewGroup {
+        This(self) {
             UILabel()
                 .font(.preferredFont(forTextStyle: .caption1))
                 .identifier("surging")
@@ -105,7 +115,7 @@ struct PriceView_Preview: PreviewProvider {
         ].compactMap { $0 }
 
         return ForEach(costs, content: { (price) -> Preview in
-            let priceView = PriceView.loadFromIB()
+            let priceView = PriceView()
             priceView.price = price
             return Preview(view: priceView)
         })
