@@ -24,9 +24,33 @@ public struct This<View: UIView>: Interface {
 
     public func load() -> UIView {
         for v in children {
-            view.addSubview(v)
+            addChild(v)
         }
         view.finishBuild(on: view)
         return view
+    }
+}
+
+extension This {
+    private func addChild(_ v: UIView) {
+        view.addSubview(v)
+    }
+}
+
+extension This where View: UICollectionViewCell {
+    private func addChild(_ v: UIView) {
+        view.contentView.addSubview(v)
+    }
+}
+
+extension This where View: UITableViewCell {
+    private func addChild(_ v: UIView) {
+        view.contentView.addSubview(v)
+    }
+}
+
+extension This where View: UIStackView {
+    private func addChild(_ v: UIView) {
+        view.addArrangedSubview(v)
     }
 }
