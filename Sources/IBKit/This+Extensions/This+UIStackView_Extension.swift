@@ -8,46 +8,41 @@
 
 import UIKit
 
-extension UIStackView {
-
-    public convenience init(axis: NSLayoutConstraint.Axis, @ViewBuilder builder: () -> Container) {
-        self.init(arrangedSubviews: builder().views)
-        self.axis = axis
-    }
+extension This where View: UIStackView {
 
     @available(iOS 11.0, *)
     @discardableResult public func customSpacing(_ spacing: CGFloat, after arrangedSubview: UIView) -> Self {
-        self.setCustomSpacing(spacing, after: arrangedSubview)
+        view.setCustomSpacing(spacing, after: arrangedSubview)
         return self
     }
 
     @discardableResult public func axis(_ axis: NSLayoutConstraint.Axis) -> Self {
-        self.axis = axis
+        view.axis = axis
         return self
     }
 
     @discardableResult public func distribution(_ distribution: UIStackView.Distribution) -> Self {
-        self.distribution = distribution
+        view.distribution = distribution
         return self
     }
 
     @discardableResult public func alignment(_ alignment: UIStackView.Alignment) -> Self {
-        self.alignment = alignment
+        view.alignment = alignment
         return self
     }
 
     @discardableResult public func spacing(_ spacing: CGFloat) -> Self {
-        self.spacing = spacing
+        view.spacing = spacing
         return self
     }
 
     @discardableResult public func isBaselineRelativeArrangement(_ isBaselineRelativeArrangement: Bool) -> Self {
-        self.isBaselineRelativeArrangement = isBaselineRelativeArrangement
+        view.isBaselineRelativeArrangement = isBaselineRelativeArrangement
         return self
     }
 
     @discardableResult public func isLayoutMarginsRelativeArrangement(_ isLayoutMarginsRelativeArrangement: Bool) -> Self {
-        self.isLayoutMarginsRelativeArrangement = isLayoutMarginsRelativeArrangement
+        view.isLayoutMarginsRelativeArrangement = isLayoutMarginsRelativeArrangement
         return self
     }
 }

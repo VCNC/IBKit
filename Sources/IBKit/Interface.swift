@@ -10,9 +10,9 @@ import UIKit
 
 /// A type that represents an IBKit's Interface.
 public protocol Interface {
-    var views: [UIView] { get }
+    func load() -> UIView
 }
 
 extension UIView: Interface {
-    public var views: [UIView] { [self] }
+    public func load() -> UIView { self }
 }

@@ -9,11 +9,11 @@
 import UIKit
 
 /// A special interface that can contain other views.
-public struct ViewGroup: Interface {
+struct ViewGroup: Container {
 
     private let children: [UIView]
 
-    public init(@ViewBuilder builder: () -> Interface) {
+    internal init(@ViewBuilder builder: () -> Container) {
         self.children = builder().views
     }
 
