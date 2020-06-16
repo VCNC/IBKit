@@ -13,7 +13,7 @@ public struct This<View: UIView>: Interface {
     private let children: [UIView]
     public let view: View
 
-    init(_ view: View, @ViewBuilder builder: () -> Container) {
+    public init(_ view: View, @ViewBuilder builder: () -> Container) {
         self.view = view
         self.children = builder().views
     }
