@@ -167,6 +167,21 @@ extension UIView {
         self.setContentCompressionResistancePriority(priority, for: axis)
         return self
     }
+
+    @discardableResult public func clipsToBounds(_ clipsToBounds: Bool) -> Self {
+        self.clipsToBounds = clipsToBounds
+        return self
+    }
+
+    @discardableResult public func tintAdjustmentMode(_ tintAdjustmentMode: TintAdjustmentMode) -> Self {
+        self.tintAdjustmentMode = tintAdjustmentMode
+        return self
+    }
+
+    @discardableResult public func assign<Root, T: UIView>(to keyPath: ReferenceWritableKeyPath<Root, T?>, on object: Root) -> Self {
+        object[keyPath: keyPath] = self as? T
+        return self
+    }
 }
 
 extension NSObjectProtocol {
