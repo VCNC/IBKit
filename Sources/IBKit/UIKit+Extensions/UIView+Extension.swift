@@ -177,11 +177,6 @@ extension UIView {
         self.tintAdjustmentMode = tintAdjustmentMode
         return self
     }
-
-    @discardableResult public func assign<Root, T: UIView>(to keyPath: ReferenceWritableKeyPath<Root, T?>, on object: Root) -> Self {
-        object[keyPath: keyPath] = self as? T
-        return self
-    }
 }
 
 extension NSObjectProtocol {

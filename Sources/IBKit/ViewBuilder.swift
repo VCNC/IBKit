@@ -67,6 +67,18 @@ import UIKit
         ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9])
     }
 
+    static public func buildBlock<C0: UIView, C1: UIView, C2: UIView, C3: UIView, C4: UIView, C5: UIView, C6: UIView, C7: UIView, C8: UIView, C9: UIView, C10: UIView>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9, _ c10: C10) -> Container {
+        ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10])
+    }
+
+    static public func buildBlock<C0: UIView, C1: UIView, C2: UIView, C3: UIView, C4: UIView, C5: UIView, C6: UIView, C7: UIView, C8: UIView, C9: UIView, C10: UIView, C11: UIView>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9, _ c10: C10, _ c11: C11) -> Container {
+        ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11])
+    }
+
+    static public func buildBlock<C0: UIView, C1: UIView, C2: UIView, C3: UIView, C4: UIView, C5: UIView, C6: UIView, C7: UIView, C8: UIView, C9: UIView, C10: UIView, C11: UIView, C12: UIView>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9, _ c10: C10, _ c11: C11, _ c12: C12) -> Container {
+        ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12])
+    }
+
     static public func buildDo<T: UIView>(_ view: T) -> Container {
         ViewGroup(children: [view])
     }
@@ -105,6 +117,18 @@ import UIKit
 
     static public func buildDo<C0: UIView, C1: UIView, C2: UIView, C3: UIView, C4: UIView, C5: UIView, C6: UIView, C7: UIView, C8: UIView, C9: UIView>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9) -> Container {
         ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9])
+    }
+
+    static public func buildDo<C0: UIView, C1: UIView, C2: UIView, C3: UIView, C4: UIView, C5: UIView, C6: UIView, C7: UIView, C8: UIView, C9: UIView, C10: UIView>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9, _ c10: C10) -> Container {
+        ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10])
+    }
+
+    static public func buildDo<C0: UIView, C1: UIView, C2: UIView, C3: UIView, C4: UIView, C5: UIView, C6: UIView, C7: UIView, C8: UIView, C9: UIView, C10: UIView, C11: UIView>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9, _ c10: C10, _ c11: C11) -> Container {
+        ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11])
+    }
+
+    static public func buildDo<C0: UIView, C1: UIView, C2: UIView, C3: UIView, C4: UIView, C5: UIView, C6: UIView, C7: UIView, C8: UIView, C9: UIView, C10: UIView, C11: UIView, C12: UIView>(_ c0: C0, _ c1: C1, _ c2: C2, _ c3: C3, _ c4: C4, _ c5: C5, _ c6: C6, _ c7: C7, _ c8: C8, _ c9: C9, _ c10: C10, _ c11: C11, _ c12: C12) -> Container {
+        ViewGroup(children: [c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12])
     }
 }
 // swiftlint:enable line_length function_parameter_count
