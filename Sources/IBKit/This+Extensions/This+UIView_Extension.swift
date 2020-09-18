@@ -151,4 +151,14 @@ extension This where View: UIView {
         view.setContentCompressionResistancePriority(priority, for: axis)
         return self
     }
+
+    @discardableResult public func clipsToBounds(_ clipsToBounds: Bool) -> Self {
+        view.clipsToBounds = clipsToBounds
+        return self
+    }
+
+    @discardableResult public func tintAdjustmentMode(_ tintAdjustmentMode: UIView.TintAdjustmentMode) -> Self {
+        view.tintAdjustmentMode = tintAdjustmentMode
+        return self
+    }
 }
