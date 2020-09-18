@@ -46,7 +46,7 @@ extension UIView {
         return self
     }
 
-    @available(iOS 12.0, *)
+    @available(iOS 13.0, *)
     @discardableResult public func transform3D(_ transform: CATransform3D) -> Self {
         self.transform3D = transform
         return self
