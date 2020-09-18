@@ -157,7 +157,7 @@ extension This where View: UIView {
         return self
     }
 
-    @discardableResult public func tintAdjustmentMode(_ tintAdjustmentMode: TintAdjustmentMode) -> Self {
+    @discardableResult public func tintAdjustmentMode(_ tintAdjustmentMode: UIView.TintAdjustmentMode) -> Self {
         view.tintAdjustmentMode = tintAdjustmentMode
         return self
     }
